@@ -175,6 +175,7 @@ export default function ClassSchedulePage() {
                   onClick={handleProfileClick}
                   className="w-12 h-12 rounded-full overflow-hidden shadow-lg hover:scale-110 transition-transform duration-200 cursor-pointer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/profile.jfif"
                     alt="Profile"
@@ -263,7 +264,7 @@ export default function ClassSchedulePage() {
           <div className="card p-8 animate-slide-in-left">
             <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Calendar className="w-6 h-6 text-blue-600" />
-              Today's Classes
+              Today&#39;s Classes
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

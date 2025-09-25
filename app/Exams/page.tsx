@@ -1,7 +1,7 @@
 'use client'
 import Sidebar from '../components/Sidebar'
 import { useState } from 'react'
-import { Calendar, Clock, MapPin, BookOpen, AlertCircle, CheckCircle, XCircle, Search, Filter, Plus } from 'lucide-react'
+import { Calendar, Clock, MapPin, BookOpen, AlertCircle, CheckCircle, XCircle, Search, Plus } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 type Exam = {
   id: number
@@ -95,7 +95,7 @@ export default function ExamsPage() {
   }
 
   const handleMarkAsCompleted = (id: number) => {
-    const updated = exams.map(e => e.id === id ? { ...e, status: 'Completed' as 'Completed' } : e)
+    const updated = exams.map(e => e.id === id ? { ...e, status: 'Completed' as const } : e)
     setExams(updated)
   }
 
@@ -104,7 +104,7 @@ export default function ExamsPage() {
     if (upcomingExams.length === 0) return
     const sortedUpcoming = [...upcomingExams].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     const next = sortedUpcoming[0]
-    const updated = exams.map(e => e.id === next.id ? { ...e, status: 'Completed' as 'Completed' } : e)
+    const updated = exams.map(e => e.id === next.id ? { ...e, status: 'Completed' as const } : e)
     setExams(updated)
   }
 
@@ -181,6 +181,7 @@ export default function ExamsPage() {
                   onClick={handleProfileClick}
                   className="w-12 h-12 rounded-full overflow-hidden shadow-lg hover:scale-110 transition-transform duration-200 cursor-pointer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/profile.jfif"
                     alt="Profile"
