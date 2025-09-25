@@ -62,6 +62,7 @@ export default function Sidebar({ className = '' }: SidebarProps) {
                 onClick={handleProfileClick}
                 className="w-20 h-20 rounded-full overflow-hidden shadow-lg hover:scale-110 transition-transform duration-200 mb-4 cursor-pointer"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/profile.jfif"
                   alt="Profile"

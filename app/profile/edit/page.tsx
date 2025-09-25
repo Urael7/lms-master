@@ -104,6 +104,7 @@ export default function ProfileEditPage() {
                   onClick={handleProfileClick}
                   className="w-12 h-12 rounded-full overflow-hidden shadow-lg hover:scale-110 transition-transform duration-200 cursor-pointer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/profile.jfif"
                     alt="Profile"
@@ -119,6 +120,7 @@ export default function ProfileEditPage() {
           {/* Profile Picture Section */}
           <div className="card p-8 text-center animate-fade-in-up">
             <div className="relative inline-block mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/profile.jfif"
                 alt="Profile"

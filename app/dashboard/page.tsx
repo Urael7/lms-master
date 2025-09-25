@@ -25,13 +25,14 @@ export default function DashboardPage() {
             <div className="flex justify-between items-center">
               <div className="animate-fade-in-up">
                 <h1 className="page-title">Dashboard</h1>
-                <p className="page-subtitle mt-1">Welcome back, John! Here's what's happening today.</p>
+                <p className="page-subtitle mt-1">Welcome back, John! Here&#39;s what&#39;s happening today.</p>
               </div>
               <div className="flex items-center space-x-4">
                 <button
                   onClick={handleProfileClick}
                   className="w-12 h-12 rounded-full overflow-hidden shadow-lg hover:scale-110 transition-transform duration-200 cursor-pointer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/profile.jfif"
                     alt="Profile"
@@ -94,7 +95,7 @@ export default function DashboardPage() {
                 <Calendar className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Class Schedule</h3>
-              <p className="text-gray-600">See today's classes</p>
+              <p className="text-gray-600">See today&#39;s classes</p>
             </Link>
             
             <Link href="/BudgetTracker" className="card p-6 text-center hover-lift cursor-pointer">

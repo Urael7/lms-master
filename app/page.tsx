@@ -7,9 +7,10 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import Link from 'next/link'
 import { useRef } from 'react'
+import type { Swiper as SwiperInstance } from 'swiper'
 
 export default function WelcomePage() {
-  const swiperRef = useRef<any>(null)
+  const swiperRef = useRef<SwiperInstance | null>(null)
 
   return (
     <div className="h-screen w-full flex items-center justify-center bg-gray-100">
